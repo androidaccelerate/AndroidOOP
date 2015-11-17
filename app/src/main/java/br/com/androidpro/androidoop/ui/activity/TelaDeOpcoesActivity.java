@@ -22,4 +22,16 @@ public class TelaDeOpcoesActivity extends Activity {
     public void irParaLeakDeMemoria(View v) {
         startActivity(new Intent(this, LeakDeMemoriaActivity.class));
     }
+
+    public void irParaCamposComTitulo(View v) {
+        startActivity(new Intent(this, CamposComTituloActivity.class));
+    }
+
+    public void irParaListaComSecoes(View v) {
+        startActivity(new Intent(this, ListaComSecoesActivity.class));
+    }
+
+    public void irParaConcorrenciaActivity(View v) {
+        startActivity(new Intent(this, ConcorrenciaActivity.class));
+    }
 }

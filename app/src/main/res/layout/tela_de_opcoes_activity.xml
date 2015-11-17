@@ -15,14 +15,32 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Ir para: OlaMundoActivity"
-            android:onClick="irParaOlaMundo"/>
+            android:onClick="irParaOlaMundo"
+            android:text="Ir para: OlaMundoActivity" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="Ir para: LeakDeMemoriaActivity"
-            android:onClick="irParaLeakDeMemoria"/>
+            android:onClick="irParaLeakDeMemoria"
+            android:text="Ir para: LeakDeMemoriaActivity" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:onClick="irParaCamposComTitulo"
+            android:text="Ir para: CamposComTituloActivity" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:onClick="irParaListaComSecoes"
+            android:text="Ir para: ListaDeStringsActivity" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:onClick="irParaConcorrenciaActivity"
+            android:text="Ir para: ConcorrênciaActivity" />
 
     </LinearLayout>
 </ScrollView>

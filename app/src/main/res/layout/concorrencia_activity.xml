@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="12dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="12dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Concorrência" />
+
+    <Button
+        android:id="@+id/roda_thread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Roda thread" />
+
+    <Button
+        android:id="@+id/roda_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Roda service" />
+
+    <Button
+        android:id="@+id/roda_async_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Roda async task" />
+
+    <Button
+        android:id="@+id/roda_handler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Roda handler" />
+
+    <Button
+        android:id="@+id/roda_lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Roda lock" />
+
+</LinearLayout>

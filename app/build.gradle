@@ -5,13 +5,14 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "br.com.concretesolutions.androidoop"
+        applicationId "br.com.androidpro.androidoop"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
     buildTypes {
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'

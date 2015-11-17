@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,27 +15,30 @@ import java.util.Map;
 
 public class FeaturesDoJava {
 
+    boolean ehVerdadeiro = false;
+
+    public static final int SOLTEIRO = 0,
+            CASADO = 1,
+            DIVORCIADO = 2;
+
+
     List<String> operadorDiamante = new ArrayList<>();
 
     Map<String, List<Object>> mapa = new HashMap<>();
 
     public void verificaSePodemosUsarAutoCloseable() {
 
-//        // TRY WITH RESOURCES
-//        InputStream is = null;
-//        try {
-//            is = new URL("http://google.com").openConnection().getInputStream()
-//            is.read(new byte[1024]);
-//        } finally {
-//
-//            if (is != null) {
-//                try {
-//                    is.close();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }
+        // TRY WITH RESOURCES
+        try (InputStream is = new URL("http://google.com").openConnection().getInputStream()) {
+
+            is.read(new byte[1024]);
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void verificaSwitchComStrings() {
@@ -63,9 +67,7 @@ public class FeaturesDoJava {
             method.invoke("testando", 1, 2);
 
             // MULTI CATCH
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
+        } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
             e.printStackTrace();
         }
     }
